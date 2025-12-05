@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SAB AND PVB MARKET - Page 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>PAGE 2 — Harga RM1</h1>
+
+<div class="product">
+    <img src="img2.jpg" alt="Product">
+    <p>Harga: RM1</p>
+    <p>Stok: <span id="stock2">20</span></p>
+    <button onclick="buy(2)">Beli Sekarang</button>
+</div>
+
+<footer>
+    Copyright By @xcccccccccx
+</footer>
+
+<script>
+function buy(id){
+    let stockElement = document.getElementById("stock" + id);
+    let stock = parseInt(stockElement.textContent);
+
+    if(stock > 0){
+        stock--;
+        stockElement.textContent = stock;
+        window.open("https://wa.me/601136191127?text=Saya mahu beli produk Page 2");
+    } else {
+        alert("Stok habis!");
+    }
+}
+</script>
+
+</body>
+</html>
